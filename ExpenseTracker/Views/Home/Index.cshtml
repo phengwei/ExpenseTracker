@@ -1,0 +1,24 @@
+﻿@model ExpenseTracker.Models.User
+@{
+    ViewData["Title"] = "Home Page";
+    //Layout = null;
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    @foreach (var claim in User.Claims)
+    {
+        var isNumeric = int.TryParse(claim.Value, out int n);
+        if (!isNumeric)
+        {
+            <h1> Welcome @claim.Value</h1>
+        }
+    }
+}
+else
+{
+    <h1>Welcome stranger!</h1>
+}
+
+
+

@@ -1,0 +1,76 @@
+﻿@model ExpenseTracker.Models.Category
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<p>
+    <a asp-action="Create">Add new sub category</a>
+</p>
+
+<div>
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Housing)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Housing)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Transportation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Transportation)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Food)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Food)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Utilities)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Utilities)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insurance)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insurance)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SubCategory)
+        </dt>
+        <dd class="col-sm-10">
+            <table class="table">
+                <tr>
+                    <th>Personal Spending</th>
+                    <th>Entertainment</th>
+                </tr>
+                @foreach (var item in Model.SubCategory)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PersonalSpending)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Entertainment)
+                    </td>
+                    <td>
+
+                        <a asp-action="Delete" asp-route-id="@item.SubCategoryID">Delete</a>
+                    </td>
+                </tr>
+                }
+            </table>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CategoryID">Edit</a>
+</div>

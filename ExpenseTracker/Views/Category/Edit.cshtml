@@ -1,0 +1,48 @@
+﻿@model ExpenseTracker.Models.Category
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CategoryID" />
+            <div class="form-group">
+                <label asp-for="Housing" class="control-label"></label>
+                <input asp-for="Housing" class="form-control" />
+                <span asp-validation-for="Housing" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Transportation" class="control-label"></label>
+                <input asp-for="Transportation" class="form-control" />
+                <span asp-validation-for="Transportation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Food" class="control-label"></label>
+                <input asp-for="Food" class="form-control" />
+                <span asp-validation-for="Food" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Utilities" class="control-label"></label>
+                <input asp-for="Utilities" class="form-control" />
+                <span asp-validation-for="Utilities" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insurance" class="control-label"></label>
+                <input asp-for="Insurance" class="form-control" />
+                <span asp-validation-for="Insurance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Details" asp-route-id="1">Back to List</a>
+</div>
