@@ -39,7 +39,7 @@ namespace ExpenseTracker.Controllers
 
             if (category == null)
             {
-                return RedirectToAction("Create", "Category");
+                return RedirectToAction("CreateCategory", "Category");
             }
 
             return View(category);
@@ -50,15 +50,53 @@ namespace ExpenseTracker.Controllers
         {
             return View(await _context.Category.ToListAsync());
         }
-        public IActionResult Create()
+
+        public IActionResult CreateCategory()
         {
             return View();
+        }
+
+        public IActionResult CreateSubCategory()
+        {
+            return View();
+        }
+
+
+
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateCategory(
+        [Bind("Housing,Transportation,Food,Utilities,Insurance")] Category category)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                    var id = int.Parse(userId);
+
+                    category.UserID = id;
+
+                    _context.Add(category);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("Details", "Category", new { id = 1 });
+                }
+            }
+            catch (DbUpdateException /* ex */)
+            {
+                //Log the error (uncomment ex variable name and write a log.
+                ModelState.AddModelError("", "Unable to save changes. " +
+                    "Try again, and if the problem persists " +
+                    "see your system administrator.");
+            }
+            return View(category);
         }
 
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(
+        public async Task<IActionResult> CreateSubCategory(
         [Bind("PersonalSpending,Entertainment")] SubCategory sCategory)
         {
             try

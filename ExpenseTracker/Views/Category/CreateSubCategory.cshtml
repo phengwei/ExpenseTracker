@@ -1,0 +1,30 @@
+﻿@model ExpenseTracker.Models.SubCategory
+
+@{
+    ViewData["Title"] = "CreateSubCategory";
+}
+
+<h1>Create</h1>
+
+<h4>Category</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateSubCategory">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PersonalSpending" class="control-label"></label>
+                <input asp-for="PersonalSpending" class="form-control" />
+                <span asp-validation-for="PersonalSpending" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Entertainment" class="control-label"></label>
+                <input asp-for="Entertainment" class="form-control" />
+                <span asp-validation-for="Entertainment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

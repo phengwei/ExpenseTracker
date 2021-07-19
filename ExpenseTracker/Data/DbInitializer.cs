@@ -20,8 +20,8 @@ namespace ExpenseTracker.Data
 
             var categories = new Category[]
             {
-            new Category{Housing="Carson",Transportation="Alexander",Food="Bihun",Utilities="Tnb",Insurance="Insuran",UserID=1},
-            new Category{Housing="Bunga",Transportation="Car",Food="Bihun",Utilities="Tnb",Insurance="Insuran",UserID=2}
+            new Category{Housing="2000",Transportation="300",Food="1000",Utilities="200",Insurance="300",UserID=1},
+            new Category{Housing="3000",Transportation="500",Food="1200",Utilities="300",Insurance="500",UserID=2}
             };
             foreach (Category s in categories)
             {
@@ -33,12 +33,12 @@ namespace ExpenseTracker.Data
             {
             new SubCategory {
                 CategoryID = categories.Single(s => s.UserID == 1).CategoryID,
-                PersonalSpending = "Car",
+                PersonalSpending = "Shopping",
                 Entertainment = "Movie"
             },
             new SubCategory {
                 CategoryID = categories.Single(s => s.UserID == 1).CategoryID,
-                PersonalSpending = "Car",
+                PersonalSpending = "Gift",
                 Entertainment = "Game"
             },
             new SubCategory {
@@ -48,12 +48,12 @@ namespace ExpenseTracker.Data
             },
              new SubCategory {
                 CategoryID = categories.Single(s => s.UserID == 2).CategoryID,
-                PersonalSpending = "Car",
+                PersonalSpending = "Gift",
                 Entertainment = "Movie"
             },
             new SubCategory {
                 CategoryID = categories.Single(s => s.UserID == 2).CategoryID,
-                PersonalSpending = "Car",
+                PersonalSpending = "Shopping",
                 Entertainment = "Movie"
             },
             };

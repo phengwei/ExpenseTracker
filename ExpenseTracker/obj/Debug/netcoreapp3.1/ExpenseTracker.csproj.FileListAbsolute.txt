@@ -142,7 +142,6 @@ C:\Users\tanbr\source\repos\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp3.
 C:\Users\tanbr\source\repos\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp3.1\ExpenseTracker.TagHelpers.input.cache
 C:\Users\tanbr\source\repos\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp3.1\ExpenseTracker.TagHelpers.output.cache
 C:\Users\tanbr\source\repos\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp3.1\ExpenseTracker.RazorCoreGenerate.cache
-C:\Users\tanbr\source\repos\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp3.1\Razor\Views\Category\Create.cshtml.g.cs
 C:\Users\tanbr\source\repos\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp3.1\Razor\Views\Category\Details.cshtml.g.cs
 C:\Users\tanbr\source\repos\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp3.1\Razor\Views\Category\Edit.cshtml.g.cs
 C:\Users\tanbr\source\repos\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
@@ -175,3 +174,5 @@ C:\Users\tanbr\source\repos\ExpenseTracker\ExpenseTracker\bin\Debug\netcoreapp3.
 C:\Users\tanbr\source\repos\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\tanbr\source\repos\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\tanbr\source\repos\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp3.1\ExpenseTracker.csproj.AssemblyReference.cache
+C:\Users\tanbr\source\repos\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp3.1\Razor\Views\Category\CreateCategory.cshtml.g.cs
+C:\Users\tanbr\source\repos\ExpenseTracker\ExpenseTracker\obj\Debug\netcoreapp3.1\Razor\Views\Category\CreateSubCategory.cshtml.g.cs
